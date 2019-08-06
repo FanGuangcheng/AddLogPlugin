@@ -45,7 +45,7 @@ public class AddLogAdviceAdapter extends AdviceAdapter {
     protected void onMethodEnter() {
         super.onMethodEnter();
         if (logHandleClass != null && logHandleMethod != null) {
-            String methodStr = mClassName + "->" + mMethodName + "onMethodEnter";
+            String methodStr = mClassName + "->" + mMethodName + ": onMethodEnter ";
 
             mv.visitLdcInsn(methodStr);
             mv.visitMethodInsn(INVOKESTATIC, logHandleClass,
